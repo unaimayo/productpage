@@ -312,6 +312,7 @@ def getProductReviews(product_id, headers):
     for _ in range(2):
         try:
             url = reviews['name'] + "/" + reviews['endpoint'] + "/" + str(product_id)
+            print(url)
             res = requests.get(url, headers=headers, timeout=3.0)
         except:
             res = None
@@ -324,6 +325,7 @@ def getProductReviews(product_id, headers):
 def getProductRatings(product_id, headers):
     try:
         url = ratings['name'] + "/" + ratings['endpoint'] + "/" + str(product_id)
+        print(url)
         res = requests.get(url, headers=headers, timeout=3.0)
     except:
         res = None
